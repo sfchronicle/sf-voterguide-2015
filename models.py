@@ -9,6 +9,7 @@ class Measure(db.Model):
     letter = db.Column(db.String(1))
     title = db.Column(db.String(100))
     description = db.Column(db.Text())
+    endorse = db.Column(db.Boolean())
     endorsement_url = db.Column(db.String(100))
     endorsement_video_url = db.Column(db.String(100))
 
