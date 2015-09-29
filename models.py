@@ -4,18 +4,16 @@ from app import db
 # Create models here
 
 
-class Example(db.Model):
+class Measure(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    headline = db.Column(db.Unicode(64))
-    body = db.Column(db.UnicodeText())
+    letter = db.Column(db.String(1))
+    title = db.Column(db.String(100))
+    description = db.Column(db.Text())
+    endorsement_url = db.Column(db.String(100))
+    endorsement_video_url = db.Column(db.String(100))
 
-    created_on = db.Column(db.DateTime(), default=datetime.utcnow)
-    updated_on = db.Column(
-        db.DateTime(), default=datetime.utcnow, onupdate=datetime.utcnow)
-
-    def __init__(self, headline="", body=""):
-        self.headline = headline
-        self.body = body
+    def __unicode__(self):
+        return '{} {}'.format(self.letter, self.letter, self.title)
 
     def __repr__(self):
-        return '<Example - {}>'.format(self.headline)
+        return '<Measure {}: {}>'.format(self.letter, self.title)

@@ -10,18 +10,20 @@
     {% include 'components/nav.html' %}
     <section class="content">
         <dl>
+        {% for measure in measures %}
             <dt>
                 <h2>
-                    <span>A.</span>
-                    <span>Affordable housing bond</span>
+                    <span>{{ measure.letter }}.</span>
+                    <span>{{ measure.title }}</span>
                 </h2>
             </dt>
-            <dd>To incur the following bonded indebtedness of the city: not to exceed $310,000,000 to finance the construction, acquisition, improvement, rehabilitation, preservation and repair of affordable housing improvements, and related costs necessary or convenient for the foregoing purposes; authorizing landloards to pass-through 50 percent of the resulting property tax increase to residential tenants.</dd>
+            <dd>{{ measure.description }}</dd>
 
             <aside>
                 <h3>Our take</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam animi vitae quidem, doloribus architecto iusto recusandae, minus, obcaecati rem nam aperiam illo? Ratione, quia laboriosam obcaecati cum quis eveniet minus! <a href="#">Read more</a></p>
+                <p>TK <a href="#">Read more</a></p>
             </aside>
+        {% endfor %}
         </dl>
     </section>
 </main>
