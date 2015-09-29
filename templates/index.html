@@ -3,22 +3,27 @@
 {% block title %}New Web App | SF Chronicle{% endblock %}
 
 {% block head %}
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="http://www.sfchronicle.com/external/css/global.sharedmain.r6.14.1.4.css">
-<link rel="stylesheet" href="http://www.sfchronicle.com/external/css/global.sharedmodules.r6.14.1.4.css">
 {% endblock %}
 
 {% block content %}
-<main class="container">
-  {% include '_sfc-header.html' %}
-  <div class="row">
-    <div class="large-8 large-offset-2 columns">
-      <blockquote>
-        Cockroaches and socialites are the only things that can stay up all night and eat anything.
-        <cite>Herb Caen</cite>
-      </blockquote>
-    </div>
-  </div>
+<main>
+    {% include 'components/nav.html' %}
+    <section class="content">
+        <dl>
+            <dt>
+                <h2>
+                    <span>A.</span>
+                    <span>Affordable housing bond</span>
+                </h2>
+            </dt>
+            <dd>To incur the following bonded indebtedness of the city: not to exceed $310,000,000 to finance the construction, acquisition, improvement, rehabilitation, preservation and repair of affordable housing improvements, and related costs necessary or convenient for the foregoing purposes; authorizing landloards to pass-through 50 percent of the resulting property tax increase to residential tenants.</dd>
+
+            <aside>
+                <h3>Our take</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam animi vitae quidem, doloribus architecto iusto recusandae, minus, obcaecati rem nam aperiam illo? Ratione, quia laboriosam obcaecati cum quis eveniet minus! <a href="#">Read more</a></p>
+            </aside>
+        </dl>
+    </section>
 </main>
 {% endblock %}
 

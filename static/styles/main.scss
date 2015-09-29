@@ -1,4 +1,8 @@
-@import "../bower_components/foundation/scss/foundation/components/grid";
-@import "../bower_components/foundation/scss/foundation/components/labels";
+@import '../bower_components/foundation/scss/normalize';
+@import 'bourbon';  // mixins
+@import 'neat';  // grid
+@import 'base/base';  // default styles
 
-@import 'project';
+// project code
+@import 'components/nav';
+@import 'components/project';
