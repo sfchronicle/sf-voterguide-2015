@@ -16,6 +16,15 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+    <script>
+        (function() {
+    		var css = document.createElement('link');
+    		css.href = '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css';
+    		css.rel = 'stylesheet';
+    		css.type = 'text/css';
+    		document.getElementsByTagName('head')[0].appendChild(css);
+    	})();
+    </script>
     {% block javascript %}{% endblock %}
 
     {% if config.DEBUG %}

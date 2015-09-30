@@ -8,24 +8,28 @@
 {% block content %}
 <main>
     {% include 'components/nav.html' %}
-    <section class="content">
+    <article>
+        {% include 'components/subnav.html' %}
         <dl>
         {% for measure in measures %}
             <dt>
                 <h2>
-                    <span>{{ measure.letter }}.</span>
-                    <span>{{ measure.title }}</span>
+                    <span class="measure-letter {{ measure.letter }}">{{ measure.letter }}.</span>
+                    <span class="measure-title {{ measure.letter }}">{{ measure.title }}</span>
                 </h2>
             </dt>
-            <dd>{{ measure.description }}</dd>
+            <dd>
+                <h3>the gist</h3>
+                <p>{{ measure.description }}</p>
 
-            <aside>
-                <h3>Our take</h3>
-                <p>TK <a href="#">Read more</a></p>
-            </aside>
+                <section>
+                    <h3>Our take</h3>
+                    <p>TK <a class="read-more" href="#">Read more</a></p>
+                </section>
+            </dd>
         {% endfor %}
         </dl>
-    </section>
+    </article>
 </main>
 {% endblock %}
 

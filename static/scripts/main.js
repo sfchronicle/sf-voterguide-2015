@@ -4,6 +4,21 @@ var App = App || {};
 
 App = {
   init: function () {
-    console.log('The Voice of the West. The Voice of San Francisco and the Bay Area.');
+    this.nav();
+  },
+  nav: function () {
+    $(document).ready(function() {
+      var menuToggle = $('#js-mobile-menu').unbind();
+      $('#js-navigation-menu').removeClass('show');
+
+      menuToggle.on('click', function(e) {
+        e.preventDefault();
+        $('#js-navigation-menu').slideToggle(function(){
+          if($('#js-navigation-menu').is(':hidden')) {
+            $('#js-navigation-menu').removeAttr('style');
+          }
+        });
+      });
+    });
   }
 };
