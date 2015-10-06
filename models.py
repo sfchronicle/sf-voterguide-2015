@@ -11,7 +11,7 @@ class Measure(db.Model):
     description = db.Column(db.Text())
     endorse = db.Column(db.Boolean())
     endorsement_reason = db.Column(db.Text())
-    endorsement_url = db.Column(db.String(100))
+    endorsement_url = db.Column(db.String(255))
     endorsement_video_url = db.Column(db.String(100))
 
     def __unicode__(self):

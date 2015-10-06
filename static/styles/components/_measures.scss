@@ -1,27 +1,69 @@
 $mobile: new-breakpoint(max-width 640px 12);
 
-dl {
+article {
   @include outer-container;
+  padding: 20px;
 }
 
-dt {
-  @include span-columns(4);
+hr {
+  margin: 10px auto;
 }
 
-dd {
+.candidates {
+  @include span-columns(12);
+}
+.candidate-race {
+  @include span-columns(12 of 12);
+}
+
+.measures {
   @include span-columns(8);
-}
+  @include shift(2);
 
-dt, dd {
   @include media($mobile) {
     @include span-columns(12);
+    @include shift(0);
   }
 }
 
-.measure-letter {
-  padding: 10px;
-  border: 1px solid #000;
-  font-weight: 700;
-  margin-right: 10px;
-  display: inline-block;
+.measure {
+  @include span-columns(8 of 8);
+  margin-bottom: 20px;
+}
+
+.letter {
+  @include span-columns(1 of 8);
+  span {
+    $size: 50px;
+    float: right;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+  }
+}
+.measure-content {
+  @include span-columns(7 of 8);
+}
+// ===================
+
+.vote,
+.fa:before {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.vote-yes {
+  color: #43AC6A;
+  border-color: #3a945b;
+}
+
+.vote-no {
+  color: #f04124;
+  border-color: #de2d0f;
 }
