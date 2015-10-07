@@ -1,0 +1,30 @@
+$mobile: new-breakpoint(max-width 840px 12);
+.candidates {
+  @include span-columns(12);
+}
+
+.candidate-race {
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(space-between);
+}
+
+.candidate-race > h2 {
+ @include align-items(center);
+}
+.candidate-race > .candidate {
+  @include flex(1);
+  padding: 10px;
+}
+
+// .candidate > img {
+//   border-radius: 50%;
+//   display: block;
+//   margin: 0 auto;
+//   width: 100px;
+// }
+//
+// .candidate > h3 {
+//   font-size: 1em;
+//   text-align: center;
+// }

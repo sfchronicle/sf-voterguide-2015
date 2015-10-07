@@ -1,5 +1,4 @@
 $mobile: new-breakpoint(max-width 640px 12);
-
 article {
   @include outer-container;
   padding: 20px;
@@ -7,13 +6,6 @@ article {
 
 hr {
   margin: 10px auto;
-}
-
-.candidates {
-  @include span-columns(12);
-}
-.candidate-race {
-  @include span-columns(12 of 12);
 }
 
 .measures {
@@ -29,6 +21,10 @@ hr {
 .measure {
   @include span-columns(8 of 8);
   margin-bottom: 20px;
+  &.gray {
+    color: gray;
+    opacity: 0.8;
+  }
 }
 
 .letter {

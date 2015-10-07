@@ -1,9 +1,9 @@
 <section class="measures">
     <h2 id="measures">Measures</h2>
 {% for measure in measures %}
-    <section class="measure">
+    <section class="measure {% if measure.endorsement_url %}{% else %}gray{% endif %}">
         <section class="letter">
-            <span class="{% if measure.endorse %}vote-yes{% else %}vote-no{% endif %}">{{ measure.letter }}</span>
+            <span>{{ measure.letter }}</span>
         </section>
         <section class="measure-content">
             <h3>{{ measure.title }}</h3>

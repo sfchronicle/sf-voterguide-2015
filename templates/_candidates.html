@@ -1,12 +1,44 @@
 <section class="candidates">
-    <h2 id="candidate-races">Candidate races</h2>
+    <h2>Mayor</h2>
+    <hr>
     <section class="candidate-race">
-        <h3>Mayor</h3>
+        {% for candidate in mayor %}
+        <div class="candidate">
+            <h3>{{ candidate.name }}</h3>
+            {% if candidate.image_url %}
+            <img src="{{ candidate.image_url }}" alt="{{ candidate.name }}">
+            {% else %}
+            <img src="http://placehold.it/100x100" alt="placeholder">
+            {% endif %}
+        </div>
+        {% endfor %}
     </section>
+    <h2>District 3</h2>
+    <hr>
     <section class="candidate-race">
-        <h3>District 3</h3>
+        {% for candidate in d3 %}
+        <div class="candidate">
+            <h3>{{ candidate.name }}</h3>
+            {% if candidate.image_url %}
+            <img src="{{ candidate.image_url }}" alt="{{ candidate.name }}">
+            {% else %}
+            <img src="http://placehold.it/100x100" alt="placeholder">
+            {% endif %}
+        </div>
+        {% endfor %}
     </section>
+    <h2>Sheriff</h2>
+    <hr>
     <section class="candidate-race">
-        <h3>Sheriff</h3>
+        {% for candidate in sheriff %}
+        <div class="candidate">
+            <h3>{{ candidate.name }}</h3>
+            {% if candidate.image_url %}
+            <img src="{{ candidate.image_url }}" alt="{{ candidate.name }}">
+            {% else %}
+            <img src="http://placehold.it/100x100" alt="placeholder">
+            {% endif %}
+        </div>
+        {% endfor %}
     </section>
 </section>

@@ -9,7 +9,7 @@
 <main>
     {% include 'components/nav.html' %}
     <article>
-        {% include 'components/subnav.html' %}
+        {% include 'components/banner.html' %}
         {% include '_candidates.html' %}
         {% include '_measures.html' %}
     </article>
@@ -19,7 +19,7 @@
 {% block javascript %}
 <script>
   $(document).ready(function() {
-    App.init();
+    //App.init();
   });
 </script>
 {% endblock %}
