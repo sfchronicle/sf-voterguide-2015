@@ -1,14 +1,43 @@
+p {
+  margin: 0 0 1.3em;
+  font-family: 'Antenna';
+  font-size: .8em;
+}
+
 h1 {
   text-align: center;
   text-transform: uppercase;
 }
 
 h2 {
+  font-size: 2em;
+  font-family: 'Antenna';
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+
   &:before {
     content: url(http://ww4.hdnux.com/photos/41/26/56/8743867/4/50x50.png);
     position: relative;
     top: 15px;
   }
+}
+
+h3 {
+  font-size: 1.75em;
+  font-family: 'FarnhamText';
+  line-height: 1.1em;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .8em;
+  font-family: 'Antenna';
 }
 
 .subnav {

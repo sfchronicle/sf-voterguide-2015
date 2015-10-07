@@ -17,6 +17,13 @@ $mobile: new-breakpoint(max-width 840px 12);
   padding: 10px;
 }
 
+.candidate img {
+    border: 2px solid black;
+    border-radius: 50%;
+    float: left;
+    display: inline-block;
+}
+
 // .candidate > img {
 //   border-radius: 50%;
 //   display: block;
