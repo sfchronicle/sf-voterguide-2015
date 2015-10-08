@@ -4,12 +4,10 @@
     <section class="candidate-race">
         {% for candidate in mayor %}
         <div class="candidate">
-            <h3>{{ candidate.name }}</h3>
-            {% if candidate.image_url %}
-            <img src="{{ candidate.image_url }}" alt="{{ candidate.name }}">
-            {% else %}
-            <img src="http://placehold.it/100x100" alt="placeholder">
-            {% endif %}
+          <img src="http://placehold.it/100x100" alt="placeholder">
+          <div class="candidate-info">
+            <h4>{{ candidate.name }}</h4>
+          </div>
         </div>
         {% endfor %}
     </section>
@@ -18,12 +16,10 @@
     <section class="candidate-race">
         {% for candidate in d3 %}
         <div class="candidate">
-            <h3>{{ candidate.name }}</h3>
-            {% if candidate.image_url %}
-            <img src="{{ candidate.image_url }}" alt="{{ candidate.name }}">
-            {% else %}
-            <img src="http://placehold.it/100x100" alt="placeholder">
-            {% endif %}
+          <img src="http://placehold.it/100x100" alt="placeholder">
+          <div class="candidate-info">
+            <h4>{{ candidate.name }}</h4>
+          </div>
         </div>
         {% endfor %}
     </section>
@@ -32,12 +28,10 @@
     <section class="candidate-race">
         {% for candidate in sheriff %}
         <div class="candidate">
-            <h3>{{ candidate.name }}</h3>
-            {% if candidate.image_url %}
-            <img src="{{ candidate.image_url }}" alt="{{ candidate.name }}">
-            {% else %}
-            <img src="http://placehold.it/100x100" alt="placeholder">
-            {% endif %}
+          <img src="http://placehold.it/100x100" alt="placeholder">
+          <div class="candidate-info">
+            <h4>{{ candidate.name }}</h4>
+          </div>
         </div>
         {% endfor %}
     </section>
