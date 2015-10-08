@@ -32,19 +32,29 @@ hr {
   span {
     $size: 50px;
     float: right;
-    font-size: 2em;
+    font-size: 1.8em;
     text-align: center;
     font-weight: bold;
     display: block;
     width: $size;
     height: $size;
     border-radius: 50%;
-    border-width: 2px;
+    border-width: 4px;
     border-style: solid;
+    font-family: 'Antenna';
+    background-color: #F7F7F7;
+    color: #ABABAB;
   }
 }
 .measure-content {
   @include span-columns(7 of 8);
+}
+
+.measure-content:last-child {
+  margin-right: 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 // ===================
 

@@ -16,6 +16,19 @@ $mobile: new-breakpoint(max-width 840px 12);
   @include flex(1);
   padding: 10px;
 }
+.candidate img {
+  float: left;
+  display: inline-block;
+  width: 70px;
+  border-radius: 50%;
+  border-width: 4px;
+  border-style: solid;
+  color: #ABABAB;
+}
+.candidate-info {
+  display: inline-block;
+  margin-left: 10px;
+}
 
 // .candidate > img {
 //   border-radius: 50%;
