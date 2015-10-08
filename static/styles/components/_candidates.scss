@@ -3,12 +3,6 @@ $mobile: new-breakpoint(max-width 840px 12);
   @include span-columns(12);
 }
 
-.candidate-race {
-  @include display(flex);
-  @include flex-direction(column);
-  @include justify-content(space-between);
-}
-
 .candidate-race > h2 {
  @include align-items(center);
 }
@@ -16,10 +10,16 @@ $mobile: new-breakpoint(max-width 840px 12);
   @include flex(1);
   padding: 10px;
 }
+
+.candidate {
+  @include display(flex);
+}
+
 .candidate img {
   float: left;
   display: inline-block;
-  width: 70px;
+  max-width: 70px;
+  max-height: 70px;
   border-radius: 50%;
   border-width: 4px;
   border-style: solid;

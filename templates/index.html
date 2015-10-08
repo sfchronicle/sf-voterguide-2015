@@ -6,10 +6,10 @@
 {% endblock %}
 
 {% block content %}
+{% include 'components/nav.html' %}
 <main>
-    {% include 'components/nav.html' %}
+    {% include 'components/banner.html' %}
     <article>
-        {% include 'components/banner.html' %}
         {% include '_candidates.html' %}
         {% include '_measures.html' %}
     </article>

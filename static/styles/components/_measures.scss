@@ -1,14 +1,9 @@
 $mobile: new-breakpoint(max-width 640px 12);
-article {
+main {
   @include outer-container;
   padding: 20px;
 }
-
-hr {
-  margin: 10px auto;
-}
-
-.measures {
+article {
   @include span-columns(8);
   @include shift(2);
 
@@ -16,6 +11,13 @@ hr {
     @include span-columns(12);
     @include shift(0);
   }
+}
+
+hr {
+  margin: 10px auto;
+}
+
+.measures {
 }
 
 .measure {
