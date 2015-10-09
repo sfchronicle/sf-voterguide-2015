@@ -10,7 +10,9 @@
 <main>
     {% include 'components/banner.html' %}
     <article>
-        <time>Updated: {{ publish_date }}</time>
+        <p>
+            Updated: <time datetime="{{ publish_date }}">{{ publish_date.strftime('%B %-d, %Y %-I:%M %p') }}</time>
+        </p>
         {% include '_candidates.html' %}
         {% include '_measures.html' %}
     </article>
