@@ -30,14 +30,8 @@ $mobile: new-breakpoint(max-width 840px 12);
   margin-left: 10px;
 }
 
-// .candidate > img {
-//   border-radius: 50%;
-//   display: block;
-//   margin: 0 auto;
-//   width: 100px;
-// }
-//
-// .candidate > h3 {
-//   font-size: 1em;
-//   text-align: center;
-// }
+.candidate-info > h4:nth-child(1) {
+  font-family: 'FarnhamText';
+  font-size: 1.2em;
+  text-transform: none;
+}

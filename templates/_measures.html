@@ -11,7 +11,11 @@
 
             <h4>The Chronicle recommends</h4>
             <p>
+            {% if measure.endorsement_url %}
                 {% if measure.endorse %}<span class="vote vote-yes"><i class="fa fa-check"></i> Yes</span>{% else %}<span class="vote vote-no"><i class="fa fa-close"></i> No</span>{% endif %} on Measure {{ measure.letter }} {% if measure.endorsement_url %}| <a class="read-more" href="{{ measure.endorsement_url }}" target="_blank">Read more</a>{% endif %}
+            {% else %}
+            <span>Coming soon</span>
+            {% endif %}
             </p>
         </section>
     </section>

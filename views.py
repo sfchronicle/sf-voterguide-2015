@@ -11,11 +11,18 @@ def index():
     sheriff = Candidate.query.filter_by(type='sheriff')
     d3 = Candidate.query.filter_by(type='d3')
 
+    district_attorney = Candidate.query.filter_by(type='da')
+    city_attorney = Candidate.query.filter_by(type='ca')
+    treasurer = Candidate.query.filter_by(type='treasurer')
+
     return render_template(
         'index.html',
         title='index',
         measures=measures,
         sheriff=sheriff,
         mayor=mayor,
-        d3=d3
+        d3=d3,
+        district_attorney=district_attorney,
+        city_attorney=city_attorney,
+        treasurer=treasurer
     )

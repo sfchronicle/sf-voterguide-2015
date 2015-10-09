@@ -32,6 +32,7 @@ class Candidate(db.Model):
     image_url = db.Column(db.String(255))
     type = db.Column(db.String(10))
     endorse = db.Column(db.Boolean())
+    endorsement_url = db.Column(db.String(255))
 
     def __unicode__(self):
         return self.name

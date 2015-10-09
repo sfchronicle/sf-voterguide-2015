@@ -7,17 +7,10 @@
           <img src="http://placehold.it/100x100" alt="placeholder">
           <div class="candidate-info">
             <h4>{{ candidate.name }}</h4>
-
-            <div>
-                <b>Yes</b>: <span></span>
-            </div>
-            <div>
-                <b>No</b>: <span></span>
-            </div>
-
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quod itaque, nam omnis eius, cumque suscipit ratione ducimus neque esse quidem tenetur rem accusantium voluptatum! Neque sunt quaerat repudiandae, distinctio.</p>
             {% if candidate.endorse %}
             <h4>The Chronicle recommends</h4>
-            <span class="vote vote-yes"><i class="fa fa-check"></i> Yes</span> on {{ candidate.name }}
+            <span class="vote vote-yes"><i class="fa fa-check"></i> Yes</span> on {{ candidate.name }} | <a class="read-more" href="{{ candidate.endorsement_url }}" target="_blank">Read more</a>
             {% endif %}
           </div>
         </div>
@@ -30,6 +23,11 @@
           <img src="http://placehold.it/100x100" alt="placeholder">
           <div class="candidate-info">
             <h4>{{ candidate.name }}</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum velit sunt atque sit modi, sapiente, dolores repudiandae similique hic tempore fuga beatae illo quibusdam quaerat ipsam labore eos. Molestiae, labore!</p>
+            {% if candidate.endorse %}
+            <h4>The Chronicle recommends</h4>
+            <span class="vote vote-yes"><i class="fa fa-check"></i> Yes</span> on {{ candidate.name }} | <a class="read-more" href="{{ candidate.endorsement_url }}" target="_blank">Read more</a>
+            {% endif %}
           </div>
         </div>
         {% endfor %}
@@ -41,6 +39,62 @@
           <img src="http://placehold.it/100x100" alt="placeholder">
           <div class="candidate-info">
             <h4>{{ candidate.name }}</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, ea. Eos, doloremque, modi. Natus amet facere est quia, quod, tempora, mollitia enim voluptatem, nemo alias quis exercitationem incidunt minus repellat.</p>
+            {% if candidate.endorse %}
+            <h4>The Chronicle recommends</h4>
+            <span class="vote vote-yes"><i class="fa fa-check"></i> Yes</span> on {{ candidate.name }} | <a class="read-more" href="{{ candidate.endorsement_url }}" target="_blank">Read more</a>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+    </section>
+    <h2>District Attorney</h2>
+    <section class="candidate-race">
+        {% for candidate in district_attorney %}
+        <div class="candidate">
+          <img src="http://placehold.it/100x100" alt="placeholder">
+          <div class="candidate-info">
+            <h4>{{ candidate.name }}</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, ea. Eos, doloremque, modi. Natus amet facere est quia, quod, tempora, mollitia enim voluptatem, nemo alias quis exercitationem incidunt minus repellat.</p>
+            <span>Running unopposed</span>
+            {% if candidate.endorse %}
+            <h4>The Chronicle recommends</h4>
+            <span class="vote vote-yes"><i class="fa fa-check"></i> Yes</span> on {{ candidate.name }} | <a class="read-more" href="{{ candidate.endorsement_url }}" target="_blank">Read more</a>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+    </section>
+    <h2>City Attorney</h2>
+    <section class="candidate-race">
+        {% for candidate in city_attorney %}
+        <div class="candidate">
+          <img src="http://placehold.it/100x100" alt="placeholder">
+          <div class="candidate-info">
+            <h4>{{ candidate.name }}</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, ea. Eos, doloremque, modi. Natus amet facere est quia, quod, tempora, mollitia enim voluptatem, nemo alias quis exercitationem incidunt minus repellat.</p>
+            <span>Running unopposed</span>
+            {% if candidate.endorse %}
+            <h4>The Chronicle recommends</h4>
+            <span class="vote vote-yes"><i class="fa fa-check"></i> Yes</span> on {{ candidate.name }} | <a class="read-more" href="{{ candidate.endorsement_url }}" target="_blank">Read more</a>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+    </section>
+    <h2>Treasurer</h2>
+    <section class="candidate-race">
+        {% for candidate in treasurer %}
+        <div class="candidate">
+          <img src="http://placehold.it/100x100" alt="placeholder">
+          <div class="candidate-info">
+            <h4>{{ candidate.name }}</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, ea. Eos, doloremque, modi. Natus amet facere est quia, quod, tempora, mollitia enim voluptatem, nemo alias quis exercitationem incidunt minus repellat.</p>
+            <span>Running unopposed</span>
+            {% if candidate.endorse %}
+            <h4>The Chronicle recommends</h4>
+            <span class="vote vote-yes"><i class="fa fa-check"></i> Yes</span> on {{ candidate.name }} | <a class="read-more" href="{{ candidate.endorsement_url }}" target="_blank">Read more</a>
+            {% endif %}
           </div>
         </div>
         {% endfor %}
