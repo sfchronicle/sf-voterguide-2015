@@ -2,7 +2,7 @@ import os
 
 from flask.ext.frozen import Freezer
 
-from app import app, assets
+from app import app, assets, Environment
 from views import *
 
 BUILD_DIR = os.path.join(os.path.realpath(os.path.dirname(__file__)), 'build')
@@ -23,11 +23,7 @@ def upload_assets():
 if __name__ == '__main__':
     app.config['DEBUG'] = False
     app.config['ASSETS_DEBUG'] = False
-
     app.config['FREEZER_RELATIVE_URLS'] = True
-    app.config['FLASK_ASSETS_USE_S3']= True
-    app.config['S3_BUCKET_NAME'] = S3_BUCKET_NAME
-    app.config['S3_USE_HTTPS'] = False
 
     freezer.freeze()
     upload_assets()
