@@ -16,7 +16,7 @@ $ mkvirtualenv sf-voterguide-2015
 $ pip install -r requirements.txt && npm install && bower install
 ```
 
-### Build
+### Setup database
 ```bash
 $ python createdb.py
 $ python migratedb.py db init
@@ -25,11 +25,13 @@ $ grunt serve  # start server, run grunt task and open app at http://127.0.0.1:5
 ```
 
 ### Migrations
-We're using [flask-migrate]() to add db migrations to our SQLite database. If you add a new field to models.py or create a new model, you an update the database schema by running:
+We're using [flask-migrate](https://flask-migrate.readthedocs.org/en/latest/) to add db migrations to our SQLite database. If you add a new field to models.py or create a new model, you an update the database schema by running:
 ```bash
 $ python migratedb.py db migrate
 $ python migratedb.py db upgrade
 ```
 
 ### Deployment
-TK
+```bash
+$ python deploy.py
+```
