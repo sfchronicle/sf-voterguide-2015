@@ -25,7 +25,7 @@
 .text-links {
   display: inline-block;
   position: relative;
-  font-family: 'Antenna';
+  font-family: 'AntennaMedium';
   padding: 10px;
   background-color: #F7F7F7;
   border-right: 1px solid #ddd;
@@ -48,6 +48,9 @@
   &:hover {
     color: darken(#9221c7, 10%);
   }
+}
+.app-store {
+  font-family: 'AntennaMedium';
 }
 a.fa.brigade:before {
   text-decoration: none;

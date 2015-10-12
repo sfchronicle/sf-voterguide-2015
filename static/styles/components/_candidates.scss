@@ -1,11 +1,8 @@
 $mobile: new-breakpoint(max-width 840px 12);
 .candidates {
-  @include span-columns(12);
+  //@include span-columns(12);
 }
 
-.candidate-race > h2 {
- @include align-items(center);
-}
 .candidate-race > .candidate {
   @include flex(1);
   padding: 10px;
@@ -13,25 +10,31 @@ $mobile: new-breakpoint(max-width 840px 12);
 
 .candidate {
   @include display(flex);
+  @include media($mobile) {
+    @include display(block);
+  }
 }
 
 .candidate img {
-  float: left;
-  display: inline-block;
-  max-width: 70px;
-  max-height: 70px;
+  $desktop-size: 70px;
+  $mobile-size: 100px;
+  width: $desktop-size;
+  height: $desktop-size;
+  @include media($mobile) {
+    width: $mobile-size;
+    height: $mobile-size;
+  }
   border-radius: 50%;
   border-width: 4px;
   border-style: solid;
   color: #ABABAB;
 }
 .candidate-info {
-  display: inline-block;
   margin-left: 10px;
 }
 
 .candidate-info > h4:nth-child(1) {
-  font-family: 'FarnhamText';
+  font-family: 'FarnhamTextBold';
   font-size: 1.2em;
   text-transform: none;
 }
