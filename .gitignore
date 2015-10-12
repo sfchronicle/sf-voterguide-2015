@@ -10,3 +10,5 @@ data/
 .sass-cache/
 .webassets-cache/
 local_settings.py
+main.*.js
+vendor.*.js

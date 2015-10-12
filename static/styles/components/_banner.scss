@@ -43,6 +43,15 @@
   width: 96%;
   text-align: center;
 }
+.brigade {
+  color: #9221c7;
+  &:hover {
+    color: darken(#9221c7, 10%);
+  }
+}
+a.fa.brigade:before {
+  text-decoration: none;
+}
 .strong-underl {
   text-decoration: underline;
 }
