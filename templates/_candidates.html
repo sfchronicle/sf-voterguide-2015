@@ -99,4 +99,20 @@
         </div>
         {% endfor %}
     </section>
+    <h2>Community College Board</h2>
+    <section class="candidate-race">
+        {% for candidate in community_college %}
+        <div class="candidate">
+          <img src="{{ candidate.image_url }}" data-src="{{ candidate.image_url }}" alt="{{ candidate.name }}">
+          <div class="candidate-info">
+            <h4>{{ candidate.name }}</h4>
+            <p>{{ candidate.description }}</p>
+            {% if candidate.endorse %}
+            <h4>The Chronicle recommends</h4>
+            <span class="vote vote-yes"><i class="fa fa-check"></i> Yes</span> on {{ candidate.name }} | <a class="read-more" href="{{ candidate.endorsement_url }}" target="_blank">Read more</a>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+    </section>
 </section>

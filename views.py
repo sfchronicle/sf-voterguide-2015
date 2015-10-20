@@ -16,6 +16,8 @@ def index():
     city_attorney = Candidate.query.filter_by(type='ca')
     treasurer = Candidate.query.filter_by(type='treasurer')
 
+    community_college = Candidate.query.filter_by(type='cc')
+
     return render_template(
         'index.html',
         title='index',
@@ -26,5 +28,6 @@ def index():
         district_attorney=district_attorney,
         city_attorney=city_attorney,
         treasurer=treasurer,
+        community_college=community_college,
         publish_date=datetime.now()
     )
